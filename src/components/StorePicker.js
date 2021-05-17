@@ -6,12 +6,12 @@ class StorePicker extends React.Component {
 
     return (
         <form className="store-selector">
-        <h2>Please Enter a store</h2>
+        <h2>Please Enter a Store</h2>
         <input type="text" required placeholder = "Store name"/>
-        <button type="submit">visit store</button>
+        <button type="submit">Visit store</button>
         </form>
 
-    )
+    );
 }
 }
 export default StorePicker
