@@ -8,7 +8,7 @@ class StorePicker extends React.Component {
         this.goToStore = this.goToStore.bind(this);
     }
     myInput = React.createRef();
-    goToStore(event){
+    goToStore = event => {
         event.preventDefault();
 
         //1. Stop the form from submitting
