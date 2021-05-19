@@ -17,13 +17,17 @@ class App extends React.Component {
         //3. set the new fishes objet to state
         this.setState({fishes});
     };
+
+    loadSampleFishes =() => {
+        alert("Load sample fishes");
+    }
     render(){
     return(
         <div className="catch-of-the-day">
             <div className="menu">
                 <Header tagline="Fresh Seafood Market" age={50} cool={true}/>
             </div>
-            <Inventory addFish={this.addFish} />
+            <Inventory addFish={this.addFish} loadSampleFishes={this.loadSampleFishes}/>
 
             <Order />
         </div>
