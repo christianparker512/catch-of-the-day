@@ -2,21 +2,35 @@ import React from "react";
 
 
 class EditFishForm extends React.Component {
-    render(){
+    handleChange =(event) => {
+        console.log(event.currentTarget);
+    };
+        render(){
         return (
-        <div className="fish-edit">
-            <input type="text" name="name" />
-            <input type="text" name="price" />
-            <select type="text" name="status" />
-                <option value="available">Fresh!</option>
-                <option value="available">Fresh!</option>
-            <textarea name="desc" />
+        < div className="fish-edit">
             <input type="text"
-             name="image"
-            onChange={this.handleChange}
-            value={this.props.fish.image}
-            />
-            <button>Remove Fish</button>
+                   name="name"
+                   onChange={this.handleChange}
+                   value={this.props.fish.name}/>
+            <input type="text"
+                   name="price"
+                   onChange={this.handleChange}
+                   value={this.props.fish.price}/>
+            <select type="text"
+                    name="status"
+                    onChange={this.handleChange}
+                    value={"this.props.fish.status"}>
+                    <option value="available">Fresh!</option>
+                    <option value="unavailable">Sold Out!</option>
+            </select>
+            <textarea name="desc"
+                      onChange={this.handleChange}
+                      value={this.props.fish.desc}/>
+            <input type="text"
+                   name="image"
+                   onChange={this.handleChange}
+                   value={this.props.fish.image}/>
+            /*<button>Remove Fish</button>*/
         </div>
 
     );
