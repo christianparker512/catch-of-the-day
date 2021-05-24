@@ -11,9 +11,14 @@ class EditFishForm extends React.Component {
                 <option value="available">Fresh!</option>
                 <option value="available">Fresh!</option>
             <textarea name="desc" />
-            <input type="text" name="name" />
-            <input type="text" name="image" />
+            <input type="text"
+             name="image"
+            onChange={this.handleChange}
+            value={this.props.fish.image}
+            />
+            <button>Remove Fish</button>
         </div>
+
     );
     }
 }
