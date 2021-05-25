@@ -37,10 +37,11 @@ class EditFishForm extends React.Component {
                    name="image"
                    onChange={this.handleChange}
                    value={this.props.fish.image}/>
-            /*<button>Remove Fish</button>*/
+            <button onClick={()=> this.props.deleteFish(this.props.index)}>
+                Remove Fish
+            </button>
         </div>
-
-    );
+        );
     }
 }
 export default EditFishForm;
